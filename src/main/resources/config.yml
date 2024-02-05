@@ -1,0 +1,102 @@
+setting:
+  # 是否开启BC跨服
+  # 如果为true，需将插件也放入bc的plugins中载入
+  bc: false
+
+message:
+    help: >
+      {
+        "text": "BungeeCordTp\n",
+        "extra": [
+          {
+            "text": "/btp tpa [player] 请求传送\n",
+            "color": "green",
+            "clickEvent": {
+              "action": "run_command",
+              "value": "/btp help"
+            }
+          },
+          {
+            "text": "",
+            "color": "white"
+          },
+          {
+            "text": "/btp tpaccept 接受请求传送\n",
+            "color": "green",
+            "clickEvent": {
+              "action": "run_command",
+              "value": "/btp tpaccept"
+            }
+          },
+          {
+            "text": "/btp tpadeny 拒绝请求传送\n",
+            "color": "green",
+            "clickEvent": {
+              "action": "run_command",
+              "value": "/btp tpadeny"
+            }
+          },
+          {
+            "text": "/btp reload 重载配置文件",
+            "color": "green",
+            "clickEvent": {
+              "action": "run_command",
+              "value": "/btp reload"
+            }
+          }
+        ]
+      }
+    reload: >
+      {
+        "text": "BungeeCordTp: 已重载配置文件\n"
+      }
+    acceptReceive: >
+      {
+        "text": "你接受了 {player} 的传送请求\n"
+      }
+    denyReceive: >
+      {
+        "text": "你拒绝了 {player} 的传送请求\n"
+      }
+    targetIsSelf: >
+      {
+        "text": "你不应该自己传送自己\n"
+      }
+    notExistRequest: >
+      {
+        "text": "没有等待处理中的请求\n"
+      }
+    denySender: >
+      {
+        "text": "{player} 拒绝了你的传送请求\n"
+      }
+    acceptSender: >
+      {
+        "text": "{player} 接受了你的传送请求\n"
+      }
+    teleport-request: >
+      {
+        "text": "{player}向你发送了传送请求\n",
+        "extra": [
+          {
+            "text": "接受",
+            "color": "green",
+            "clickEvent": {
+              "action": "run_command",
+              "value": "/btp tpaccept"
+            }
+          },
+          {
+            "text": " | ",
+            "color": "white"
+          },
+          {
+            "text": "拒绝",
+            "color": "red",
+            "clickEvent": {
+              "action": "run_command",
+              "value": "/btp tpadeny"
+            }
+          }
+        ]
+      }

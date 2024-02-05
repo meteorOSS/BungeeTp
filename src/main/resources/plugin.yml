@@ -1,0 +1,8 @@
+name: BungeeTp
+version: '${project.version}'
+main: com.meteor.bungeetp.BungeeTp
+api-version: 1.13
+depend:
+  - JellyLib
+commands:
+  btp:
