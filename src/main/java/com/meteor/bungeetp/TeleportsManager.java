@@ -29,6 +29,7 @@ public class TeleportsManager {
         }
 
         TpaRequest tpaRequest = new TpaRequest(sender,target,System.currentTimeMillis());
+
         if(BungeeTp.instance.isEnableBc())
             new MessageBukkitTask(tpaRequest).run();
         else {

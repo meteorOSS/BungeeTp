@@ -30,9 +30,7 @@ public class MessageHandler implements Listener {
 
         ServerInfo[] servers = plugin.getProxy().getServers().values().toArray(new ServerInfo[0]);
 
-        System.out.println(servers.length);
         for (ServerInfo server : servers) {
-            System.out.println(server.getName());
             try {
                 server.sendData("bungeetp:bc", serializableRequest.toBytes());
             } catch (IOException e) {
